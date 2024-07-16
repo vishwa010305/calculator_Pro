@@ -1,0 +1,99 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, rgb(230, 147, 22), rgba(220, 61, 231, 0.74),rgba(211, 195, 92, 0.756),rgba(137, 231, 137, 0.564),rgba(106, 0, 255, 0.51));
+  animation: gradientBackground 10s ease infinite;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
+@keyframes gradientBackground {
+  0% { background: linear-gradient(135deg, rgba(237, 148, 16, 0.778), rgba(8, 176, 237, 0.745)); }
+  50% { background: linear-gradient(135deg, #60c, rgba(238, 0, 155, 0.568)); }
+  150% { background: linear-gradient(135deg, #e09, rgb(2, 157, 59)); }
+  100% { background: linear-gradient(135deg, rgb(239, 116, 0), rgb(255, 255, 255),green); }
+  200% { background: linear-gradient(135deg, rgb(135, 26, 32), rgb(78, 212, 24)); }
+  250% { background: linear-gradient(135deg, rgb(230, 78, 13), rgb(28, 118, 235)); }
+  300% { background: linear-gradient(135deg, rgb(47, 243, 207), rgb(52, 72, 48)); }
+  350% { background: linear-gradient(135deg, rgb(239, 116, 0), rgb(253, 253, 253),green); }
+  400% { background: linear-gradient(135deg, rgb(250, 42, 5), rgb(21, 8, 8),green); }
+  450% { background: linear-gradient(135deg, rgb(243, 188, 137), rgb(65, 42, 42),rgb(100, 209, 207)); }
+  500% { background: linear-gradient(135deg, rgb(248, 233, 118), rgb(253, 253, 253),rgb(111, 155, 238)); }
+  550% { background: linear-gradient(135deg, rgb(199, 36, 95), rgb(36, 121, 207),rgb(188, 224, 9)); }
+}
+
+.calculator {
+  border: 1px solid #eb9e46;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9),#d53c65,#eb9e46;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  height: 350px;
+  transition: transform 0.3s ease;
+}
+
+.calculator:hover {
+  transform: scale(1.05);
+}
+
+.display {
+  width: 100%;
+  height: 70px;
+  border: none;
+  background-color: #252525;
+  color: #ea689a;
+  text-align: right;
+  font-size: 2rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  display: infinite;
+  margin-left: 5;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.button {
+  height: 50px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: linear-gradient(145deg, #f0f0f0, #e0e0e0);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.button:active {
+  transform: scale(0.95);
+  box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.operator {
+  background-color: #f9a825;
+  color: #d53c65;
+}
+
+.button.equal-sign {
+  background-color: #f57c00;
+  color: white;
+  grid-column: span 2;
+}
+
+.button.all-clear {
+  background-color: #d32f2f;
+  color: white;
+  grid-column: span 2;
+}
+
+.button:hover {
+  background-color: #d0d0d0;
+}
